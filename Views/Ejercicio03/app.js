@@ -26,18 +26,19 @@ function calcularpromedio(notas) {
 
 let cantidadNotas = parseInt(prompt("Ingrese la cantidad de notas:"));
 
-if (cantidad > 0) {
+if (cantidadNotas > 0) {
     let notas = [];
 
-    for (let notas of cantidadNotas) {
+    for (let i = 1; i <= cantidadNotas; i++) {
         
-        let nota = parseFloat(prompt(` Ingrese la nota ${i} :`));
+        let nota = parseFloat(prompt(`Ingrese la nota ${i}:`));
         notas.push(nota);
     }
 
     let resultado = calcularpromedio(notas);
 
-    alert(resultado)
-} else {
+    alert(`resultado final: Promedio = ${resultado.promedio}, Rendimiento = ${resultado.rendimiento}`);
+} 
+else {
     alert("La cantidad cantidad ingresada no es valida.");
 }
